@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<web-app>
+  <servlet>
+    <description></description>
+    <display-name>MemberController</display-name>
+    <servlet-name>MemberController</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.MemberController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberController</servlet-name>
+    <url-pattern>/api/member.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ReservationInput</display-name>
+    <servlet-name>ReservationInput</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.ReservationInputController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationInput</servlet-name>
+    <url-pattern>/api/ReservationInput.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>ReservationListController</display-name>
+    <servlet-name>ReservationListController</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.ReservationListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationListController</servlet-name>
+    <url-pattern>/api/ReservationListController.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ncu.im3069.demo.controller.ProductDetailController</display-name>
+    <servlet-name>ncu.im3069.demo.controller.ProductDetailController</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.ProductDetailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ncu.im3069.demo.controller.ProductDetailController</servlet-name>
+    <url-pattern>/api/ProductDetail.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ncu.im3069.demo.controller.TrackingListController</display-name>
+    <servlet-name>ncu.im3069.demo.controller.TrackingListController</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.TrackingListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ncu.im3069.demo.controller.TrackingListController</servlet-name>
+    <url-pattern>/api/tracking_list.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ncu.im3069.demo.controller.UploadProductController</display-name>
+    <servlet-name>ncu.im3069.demo.controller.UploadProductController</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.UploadProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ncu.im3069.demo.controller.UploadProductController</servlet-name>
+    <url-pattern>/api/UploadProductController.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ncu.im3069.demo.controller.Test123</display-name>
+    <servlet-name>ncu.im3069.demo.controller.Test123</servlet-name>
+    <servlet-class>ncu.im3069.demo.controller.Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ncu.im3069.demo.controller.Test123</servlet-name>
+    <url-pattern>/api/Test.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
