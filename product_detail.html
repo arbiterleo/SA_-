@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+   
+
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  <!-- 自己的css -->
+  <link href="statics/css/product_detail.css" rel="stylesheet" type="text/css">
+  <!-- 範例的JavaScript -->
+  <script src="statics/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <!--標籤列-->
+  <header style="box-shadow:3px 3px 5px 2px #cccccc;">
+    <div class='container'>
+        <nav class="navbar navbar-expand-lg navbar-light px-5">
+            <a class="navbar-brand" href="#">
+                <img src='statics/img/logo.png'>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto px-5">
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="center.html">會員中心</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" style="color: #ff8800;" href="#">熱門搜尋</a>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        商品清單
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="res_list.html">預約清單</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                        <a class="dropdown-item" href="#">售屋清單</a>
+                    </div>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="#">常見問題</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="#">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-user-block" style="height: 50px;" onmouseover="switchMenu('MainMenu', 'SubMenu', 'MouseOver')" onmouseout="hideMenu()"> 
+                <div class="nav-user" style="margin-top: 11px;">
+                    <span class="d-none d-lg-block">
+                        <span class="nav-user-wrapper dropdown py-3">
+                            <span class="nav-user-login mr-3">
+                                <span class="main-menu" id="MainMenu" style="display:block;">
+                                    <i class="fas fa-user-circle"style="font-size: 1.6em;"></i>
+                                </span>
+                            </span>
+                            <div id="SubMenu" class="dropdown-menu dropdown-origin-width" style="display:none;">
+                                <a class="dropdown-item" href="#" style="color:  rgba(0, 0, 0, 0.87);">會員登出</a>
+                            </div>                    
+                        </span>
+                    </span>
+                </div>
+            </div>                   
+        </nav>               
+    </div>
+</header>
+  
+    
+      <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="https://searchome-aws.hmgcdn.com/article/doc42384/06-04-01_20161006174739_1200x799_20161006174739_20180706175708.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://static_storeasy.mylovefamily.tw/wp-content/uploads/2018/03/designer610_02_01.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://decomyplace.com/img/blog/170301_home_0.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://www.designwant.com/upload/images/2(422).jpg">
+                </div>
+                <div class="item">
+                    <img src="https://searchome.hmgcdn.com/article/doctype34/doc49147/imgsys20200119162108851_tb1200.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://www.idid.com.tw/images/data/article/doris/171213-ZhuCheng-diyiju/2-Scandinavian-iDiD-diyiju%208_7c038.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://www.idid.com.tw/images/data/article/doris/171213-ZhuCheng-diyiju/11Scandinavian-iDiD-diyiju%2017_eb9fd.jpg">
+                </div>
+                <div class="item">
+                    <img src="https://media.zenfs.com/zh-tw/twre.searchome.net/99bfb5f91ec064b784891f539bac8bd2">
+                </div>
+            </div>
+        </div> 
+    <div class="clearfix">
+        <div id="thumbcarousel" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="https://searchome-aws.hmgcdn.com/article/doc42384/06-04-01_20161006174739_1200x799_20161006174739_20180706175708.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="https://static_storeasy.mylovefamily.tw/wp-content/uploads/2018/03/designer610_02_01.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="https://decomyplace.com/img/blog/170301_home_0.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="https://www.designwant.com/upload/images/2(422).jpg"></div>
+                </div><!-- /item -->
+                <div class="item">
+                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="https://searchome.hmgcdn.com/article/doctype34/doc49147/imgsys20200119162108851_tb1200.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="https://www.idid.com.tw/images/data/article/doris/171213-ZhuCheng-diyiju/2-Scandinavian-iDiD-diyiju%208_7c038.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="https://www.idid.com.tw/images/data/article/doris/171213-ZhuCheng-diyiju/11Scandinavian-iDiD-diyiju%2017_eb9fd.jpg"></div>
+                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="https://media.zenfs.com/zh-tw/twre.searchome.net/99bfb5f91ec064b784891f539bac8bd2"></div>
+                </div><!-- /item -->
+            </div><!-- /carousel-inner -->
+            <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div> <!-- /thumbcarousel -->
+    </div><!-- /clearfix -->
+    </div> <!-- /col-sm-6 -->
+    <div class="col-sm-6">
+        <h2 id="productcol">無印工業簡約風格</h2>
+            <p id="product_id">商品編號:696969</p>
+            <p id="members_email">賣方email:rick0513kenobi@gmail.com</p>
+            <p id="price">價格:2000萬</p>
+            <p id="detail">商品描述</p>
+            <p id="square">坪數:2000坪</p>
+            <p id="location">地址:中大路5號</p>
+            <p id="elevator">有無電梯:有</p>
+            <p id="age">屋齡:2年</p>
+            <p id="haunted">是否為凶宅:否</p>
+            <p id="layout">裝潢</p>
+            <button class="button button1" onclick="Tracked()">加入追蹤清單</button>  
+            <button class="button button1" onclick="toResInput()">點我預約</button>
+        
+
+    </div> <!-- /col-sm-6 -->
+  </div> <!-- /row -->
+</div> <!-- /container -->
+
+<footer id="contact" style="background-color: #f4f4f4;">
+  <div class="container px-0">
+      <div class="row justify-content-center">
+          <div class="col-md-12 py-5">
+              <div class="row">                
+                  <div class="col-md-6 d-flex justify-content-around footer-block media">
+                      <div class="footer-box">
+                          <span class="font-weight-bold" style="margin-left: 15px;">相關社群</span>
+                              <div class="footer-content mt-3">
+                                  <div class="d-flex justify-content-around">
+                                      <a href="https://www.facebook.com/hhhfb" target="_blank">
+                                          <div class="footer-media">
+                                              <img class="footer-media-item" src="statics/img/facebook.png" alt="fb" width="60" height="60">
+                                          </div>
+                                      </a>
+                                      <a href="https://line.me/ti/p/%40ovs4341s" target="_blank" style="margin-left: 7px;">
+                                          <div class="footer-media">
+                                              <img class="footer-media-item" src="statics/img/skype.png" alt="skype" width="45" height="45" >
+                                      </div>
+                                      </a>
+                                      <a href="https://www.youtube.com/user/gorgeousspace" target="_blank" style="margin-left: 11px;">
+                                          <div class="footer-media">
+                                              <img class="footer-media-item" src="statics/img/youtube.png" alt="youtube" width="52" height="52">
+                                      </div>
+                                      </a>
+                                      <a href="https://www.instagram.com/gorgeous_space/" target="_blank">
+                                          <div class="footer-media">
+                                              <img class="footer-media-item" src="statics/img/instagram.png" alt="ig" width="64" height="49">
+                                      </div>
+                                      </a>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 d-flex justify-content-around footer-block">
+                      <div class="footer-box">              
+                          <div class="footer-content text-center">
+                              <span class="footer-content-tel">
+                                  矮人房屋網免付費諮詢信箱
+                                  <a href='mailto:zy3600924@gmail.com' class="text-primary text-photo-color"><i class="fas fa-envelope-square" style="color:rgb(97, 97, 97);"></i> </a>
+                              </span>
+                              <div class="footer-note mt-3 d-flex justify-content-center px-3">
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="/about/contact" target="_blank">聯絡我們</a></span>
+                                  </div>
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="/about/privacy_policy" target="_blank">隱私保護</a></span>
+                                  </div>
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="/about" target="_blank">關於本站</a></span>
+                                  </div>
+                              </div>
+                              <div class="footer-note mt-2 d-flex px-3">
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="/about/timeline" target="_blank">公司歷程</a></span>
+                                  </div>
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="https://www.104.com.tw/company/d6hr8sg" target="_blank">工作機會</a></span>
+                                  </div>
+                                  <div class="px-2 footer-note-item">
+                                      <span><a href="/about/sitemap" target="_blank">網站地圖</a></span>
+                                  </div>
+                              </div>   
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> 
+  </div>                           
+</footer>
+
+<script type="text/javascript">
+    //先初始化要用來存放傳值的參數
+    var product_id = 0;
+
+    //執行網頁初始化，先將資料從後端取至前端
+    init();
+
+    //用來初始化網頁的function，從後端提取資料進入前端顯示
+    function init() {
+
+      //從網址中抓取product_id
+      product_id = getParameterByURL(location.href, "product_id");
+
+      // 將資料組成object格式
+      let data_object = {
+        "product_id": product_id
+      };
+
+      // 發出GET的AJAX請求
+      $.ajax({
+        type: "GET",
+        url: "/NCU_MIS_SA/api/ProductDetail.do",
+        data: data_object,
+        crossDomain: true,
+        cache: false,
+        dataType: 'json',
+        timeout: 5000,
+        success: function (response) {
+          
+          //依提取資料生成html元素
+          createDetail(response.data);
+
+        },
+        error: function () {
+          alert("無法連線到伺服器！");
+        }
+      });
+
+    }
+
+    //將商品資料顯示於前端
+    function createDetail(data)
+    {
+      //商品名稱
+      document.getElementById("productcol").innerHTML = data.productcol;
+
+      //商品編號
+      document.getElementById("product_id").innerHTML = "商品編號 : " + data.product_id;
+      
+      //賣家信箱
+      document.getElementById("members_email").innerHTML = "賣家信箱 : " + data.members_email;
+      
+      //商品價格
+      document.getElementById("price").innerHTML = "售價 : " + (data.price/10000) + "萬元";
+      
+      //商品描述
+      document.getElementById("detail").innerHTML = "商品敘述:" + data.detail;
+      
+      //坪數
+      document.getElementById("square").innerHTML = "坪數" + data.square + "坪";
+      
+      //地址
+      document.getElementById("location").innerHTML = data.location;
+      
+      //有無電梯
+      if(data.elevator)
+      {
+        document.getElementById("elevator").innerHTML = "有無電梯 : 有";
+      }
+      else
+      {
+        document.getElementById("elevator").innerHTML = "有無電梯 : 無";
+      }
+      
+      
+      //屋齡
+      document.getElementById("age").innerHTML = "屋齡 : " + data.age + "年";
+      
+      //是否凶宅
+      if(data.haunted)
+      {
+        document.getElementById("haunted").innerHTML = "是否為凶宅 : 是";
+      }
+      else
+      {
+        document.getElementById("haunted").innerHTML = "是否為凶宅 : 否";
+      }
+      
+      //裝潢
+      document.getElementById("layout").innerHTML = "裝潢風格 : " + data.layout;
+    }
+
+    //跳到預約洽詢並且將product_id放在網址傳過去
+    function toResInput()
+    {
+      location = "res_input.html?product_id=" + product_id;
+    }
+
+    //將商品加入追蹤清單
+    function Tracked()
+    {
+
+      //let members_id = getCookie("id");
+      let members_id = 1;
+      // 將資料組成object格式
+      let data_object = {
+        "product_id": product_id,
+        "members_id": members_id
+      };
+      // 發出POST的AJAX請求
+      $.ajax({
+        type: "POST",
+        url: "/NCU_MIS_SA/api/tracking_list.do",
+        data: JSON.stringify(data_object),
+        crossDomain: true,
+        cache: false,
+        dataType: 'json',
+        timeout: 5000,
+        success: function (response) {
+          
+        //回報執行結果
+        alert(response.message);
+
+        },
+        error: function () {
+          alert("無法連線到伺服器！");
+        }
+      });
+    }
+
+    var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
+
+    // 顯示或隱藏子選單
+    function switchMenu(theMainMenu, theSubMenu, theEvent) {
+      var SubMenu = document.getElementById(theSubMenu);
+      var MainMenu = document.getElementById(theMainMenu);
+
+      if (SubMenu.style.display == 'none') { // 顯示子選單
+        SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
+        SubMenu.style.display = 'block';
+        MainMenu.style.display == 'none';
+        hideMenu(); // 隱藏子選單
+        VisibleMenu = theSubMenu;
+      } else { // 隱藏子選單
+        if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
+          SubMenu.style.display = 'none';
+          MainMenu.style.display == 'block';
+          VisibleMenu = '';
+        }
+      }
+    }
+
+    // 隱藏子選單
+    function hideMenu() {
+      if (VisibleMenu != '') {
+        document.getElementById(VisibleMenu).style.display = 'none';
+        MainMenu.style.display == 'block';
+      }
+      VisibleMenu = '';
+    }
+
+    //登入轉址判斷
+    function jumpto(id) {
+      var log = getCookie('logined');
+      var el = document.getElementById(id);
+      if (log != 1) {
+        ;
+
+        alert("請先完成登入!")
+        document.location.href = "login.html";
+      }
+
+    }
+
+
+    //讀取cookie值
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return "";
+    }
+
+    /**從網址中取得參數
+     * url:網址
+     * key:欲取得參數之名稱
+     */
+    function getParameterByURL(url, key) {
+      if (url.indexOf('?') != -1) {
+
+        var output = "";
+
+        //在此直接將各自的參數資料切割放進ary中
+        var ary = url.split('?')[1].split('&');
+
+        //此時ary的內容為：
+        //ary[0] = 'id=U001'，ary[1] = 'name=GQSM'
+
+        //下迴圈去搜尋每個資料參數
+        for (i = 0; i <= ary.length - 1; i++) {
+          //如果資料名稱為id的話那就把他取出來
+          if (ary[i].split('=')[0] == key)
+            output = ary[i].split('=')[1];
+        }
+
+        return output;
+      }
+    }
+
+  </script>
+
+
+<style>
+/* CSS used here will be applied after bootstrap.css */
+.carousel {
+    margin-top: 20px;
+}
+.item .thumb {
+	width: 25%;
+	cursor: pointer;
+	float: left;
+}
+.item .thumb img {
+	width: 100%;
+	margin: 2px;
+}
+.item img {
+	width: 100%;	
+}
+
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #FF8C00;
+}
+
+.button1:hover {
+  background-color:#FF8C00 ;
+  color: white;
+}
+
+</style>
+</body>
+</html>

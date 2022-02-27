@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="statics\css\style_kpy.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3a065c1b27.js" crossorigin="anonymous"></script>
+    <title>註冊頁面 ｜ NCU MIS SA</title>
+    <script src="statics/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+        <!--標籤列-->
+        <header style="box-shadow:3px 3px 5px 2px #cccccc;">
+            <div class='container'>
+                <nav class="navbar navbar-expand-lg navbar-light px-5" style="margin-left: 3px;">
+                    <a class="navbar-brand" href="#">
+                        <img src='statics/img/logo.png'>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse px-5" id="navbarSupportedContent" style="line-height: 2.72;">
+                        <ul class="navbar-nav mr-auto px-2" style="padding-left: 0.68rem!important; font-size: 16px">
+                            <li class="nav-item px-2" style="padding-left: 0.68rem!important;">
+                            <a class="nav-link" href="index.html" style="line-height: 2.7;">首頁</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.63rem!important;">
+                            <a class="nav-link" href="center.html" style="line-height: 2.7;">會員中心</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.64rem!important;">
+                            <a class="nav-link" style="color: #ff8800; line-height: 2.7;" href="#">熱門搜尋</a>
+                            </li>
+                            <li class="nav-item dropdown px-3" style="padding-left: 1.17rem!important;">
+                            <a class="nav-link dropdown-toggle" href="#" style="line-height: 2.7;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                商品清單
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">預約清單</a>
+                                <a class="dropdown-item" href="#">追蹤清單</a>
+                                <a class="dropdown-item" href="#">售屋清單</a>
+                            </div>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.67rem!important;">
+                            <a class="nav-link" href="#" style="line-height: 2.7;">常見問題</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.65rem!important;">
+                            <a class="nav-link" href="#" style="line-height: 2.7;">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-user-block" style="height: 50px;width: 27.8px;font-size: 16px;" onmouseover="switchMenu('MainMenu', 'SubMenu', 'MouseOver')" onmouseout="hideMenu()"> 
+                        <div class="nav-user" style="margin-top: 11px;">
+                            <span class="d-none d-lg-block">
+                                <span class="nav-user-wrapper dropdown py-3">
+                                    <span class="nav-user-login mr-3">
+                                        <span class="main-menu" id="MainMenu" style="display:block;">
+                                            <i class="fas fa-user-circle"style="font-size: 1.6em;"></i>
+                                        </span>
+                                    </span>
+                                    <div id="SubMenu" class="dropdown-menu" aria-labelledby="navbarDropdown" style="display:none;">
+                                        <a class="dropdown-item" href="login.html">會員登入</a>
+                                        <a class="dropdown-item" href="register.html">會員註冊</a>
+                                    </div>                    
+                                </span>
+                            </span>
+                        </div>
+                    </div>                   
+                </nav>               
+            </div>
+        </header>
+        
+        <!--畫面中央-->
+        <div class="container " style="background-color: rgba(236, 203, 146, 0.253);
+    								   border-bottom: 50px rgb(255, 255, 255) solid;
+    								   background-image: url(statics/img/wallpaper.jpg);
+    								   background-size: 100% 100%;
+    								   background-position: 100% 30%;">
+
+            <div class="row" style="height: 500px;">
+                
+                <!--註冊表單-->
+                <div class="col register_table" style="margin-top: -18px; margin-left: 265px;">
+
+					<div class = "row justify-content-around" style="margin-left: -158px;">
+	                    <a href="login.html"  style="font-size:2em; text-decoration:none;color:rgb(102, 102, 102); margin-left:370px;">登入</a>
+	                    <a target="_parent" style="font-size:2em; text-decoration:none;color:white; margin-right:383px;">註冊</a>				
+					</div>
+
+                    
+                    <div id="flashMessage" class="message" style="display: none;"></div>
+
+                    <form  id="form" accept-charset="utf-8 " style="text-align: center; margin-top: 10px;">
+
+                        <div style="border-radius: 1px;display:none;"><input type="hidden" name="_method" value="POST"></div>
+
+                        <div class="input text required"  >
+                            <input name="name" maxlength="30" class="input" placeholder="請輸入中文姓名" type="text" id="members_name" required="required">
+                        </div>
+
+                        <div class="input email required" style="padding-top: 10px;">
+                            <input name="email" maxlength="50" class="input" placeholder="請輸入信箱" type="email" id="members_email" required="required">
+                        </div>
+                        <div class="input text required" style="padding-top: 20px;">
+                            <input name="phone" maxlength="10" class="input" placeholder="請輸入電話號碼" type="text" id="members_phone" required="required">
+                        </div>
+                        <div class="input password required" style="padding-top: 30px;">
+                            <input name="password" maxlength="30" class="input" placeholder="請輸入密碼" type="password" id="password" required="required">
+                        </div>                        
+
+                        <div class="submit"  style="padding-top: 40px;"><input type="button" class="submit_btn" value="送出" id="submit"></div>
+
+                    </form>
+
+                </div>     
+            </div>  
+        </div>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        // 處理表單點擊事件
+                        var $form = $('#submit');
+                        $form.click(function() {
+                            submit();
+                        });
+
+                        function submit() {
+                            var name = $('#members_name').val();
+                            var email = $('#members_email').val();
+                            var phone = $('#members_phone').val();
+                            var password = $('#password').val();
+                  
+
+                            var email_rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+                            var password_rule = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+                            var phone_rule = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+
+                            if (!email_rule.test(email)) {
+                                alert("Email格式不符！");
+                            }
+                            else if(!password_rule.test(password)) {
+                                alert("密碼格式不符，長度至少8，且至少包含一個數字和英文字母！");
+                            }
+                            else if(!phone_rule.test(phone)){
+                            	alert("電話格式不符！");
+                            }
+                            else {
+                                // 將資料組成JSON格式
+                                var data_object = {
+                                    "members_name": name,
+                                    "members_email": email,
+                                    "members_phone": phone,
+                                    "password": password,
+                                    "members_status": '0',
+                                    "action":'registe'
+                                };
+
+                                // 將JSON格式轉換成字串
+                                var data_string = JSON.stringify(data_object);
+
+                                // 發出POST的AJAX請求
+                                $.ajax({
+                                        type: "POST",
+                                        url: "api/member.do",
+                                        data: data_string,
+                                        crossDomain: true,
+                                        cache: false,
+                                        dataType: 'json',
+                                        timeout: 5000,
+                                        success: function (response) {
+                                            $('#flashMessage').html(response.message);
+                                            $('#flashMessage').show();
+                                            if(response.status == 200){
+                                                updateSQLTable(response.response);
+                                            }
+                                        },
+                                        error: function () {
+                                            alert("無法連線到伺服器！");
+                                        }
+                                });
+                            }
+                        }
+
+                        function updateSQLTable(data) {
+                            $("#sql_log > tbody").empty();
+                            var time = (data.time / 1000000).toFixed(2);
+                            var table_html = "";
+
+                            table_html += '<tr>';
+                            table_html += '<td>' + '1' + '</td>';
+                            table_html += '<td>' + data.sql + '</td>';
+                            table_html += '<td style="text-align: right">' + '0' + '</td>';
+                            table_html += '<td style="text-align: right">' + data.row + '</td>';
+                            table_html += '<td style="text-align: right">' + data.row + '</td>';
+                            table_html += '<td style="text-align: right">' + time + '</td>';
+                            table_html += '</tr>';
+                            $("#sql_log > tbody").append(table_html);
+                            $("#sql_summary").html("(default) " + data.row + " queries took " + time + " ms");
+                        }
+                    });
+                    
+                    
+                    var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
+
+                    // 顯示或隱藏子選單
+                    function switchMenu( theMainMenu, theSubMenu, theEvent ){
+                        var SubMenu = document.getElementById( theSubMenu );
+                        var MainMenu = document.getElementById( theMainMenu );
+
+                        if( SubMenu.style.display == 'none' ){ // 顯示子選單
+                            SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
+                            SubMenu.style.display = 'block';
+                            MainMenu.style.display == 'none';
+                            hideMenu(); // 隱藏子選單
+                            VisibleMenu = theSubMenu;
+                        }
+                        else{ // 隱藏子選單
+                            if( theEvent != 'MouseOver' || VisibleMenu != theSubMenu ){
+                                SubMenu.style.display = 'none';
+                                MainMenu.style.display == 'block';
+                                VisibleMenu = '';
+                            }
+                        }
+                    }
+
+                    // 隱藏子選單
+                    function hideMenu(){
+                        if( VisibleMenu != '' ){
+                            document.getElementById( VisibleMenu ).style.display = 'none';
+                            MainMenu.style.display == 'block';
+                        }
+                        VisibleMenu = '';
+                    }
+                </script>
+            
+        
+        
+        <footer id="contact" style="background-color: #f4f4f4;">
+            <div class="container px-0">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 py-5">
+                        <div class="row" style="height: 130px;">                
+                            <div class="col-md-6 d-flex justify-content-around footer-block media" style="height: 113px;">
+                                <div class="footer-box">
+                                    <span class="font-weight-bold" style="margin-left: 15px;">相關社群</span>
+                                        <div class="footer-content mt-3">
+                                            <div class="d-flex justify-content-around">
+                                                <a href="https://www.facebook.com/hhhfb" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/facebook.png" alt="fb" width="60" height="60">
+                                                </a>
+                                                <a href="https://line.me/ti/p/%40ovs4341s" target="_blank" style="margin-left: 7px;">
+                                                    <img class="footer-media-item" src="statics/img/skype.png" alt="skype" width="45" height="45" >
+                                                </a>
+                                                <a href="https://www.youtube.com/user/gorgeousspace" target="_blank" style="margin-left: 11px;">
+                                                    <img class="footer-media-item" src="statics/img/youtube.png" alt="youtube" width="52" height="52">
+                                                </a>
+                                                <a href="https://www.instagram.com/gorgeous_space/" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/instagram.png" alt="ig" width="64" height="49">
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-around footer-block" style="height: 113px;">
+                                <div class="footer-box" style="line-height: 1.75;">              
+                                    <div class="footer-content text-center">
+                                        <span class="footer-content-tel">
+                                            矮人房屋網免付費諮詢信箱
+                                            <a href='mailto:zy3600924@gmail.com' class="text-primary text-photo-color"><i class="fas fa-envelope-square" style="color:rgb(97, 97, 97);"></i> </a>
+                                        </span>
+                                        <div class="footer-note mt-3 d-flex justify-content-center px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/contact" target="_blank">聯絡我們</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/privacy_policy" target="_blank">隱私保護</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about" target="_blank">關於本站</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="footer-note mt-2 d-flex px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/timeline" target="_blank">公司歷程</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="https://www.104.com.tw/company/d6hr8sg" target="_blank">工作機會</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/sitemap" target="_blank">網站地圖</a></span>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>                           
+        </footer>
+
+</body>
+
+</html>

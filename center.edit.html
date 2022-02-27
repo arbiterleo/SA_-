@@ -1,0 +1,453 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="statics\css\style_zi.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/3a065c1b27.js" crossorigin="anonymous"></script>
+        <script src="statics/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        
+        <title>編輯檔案 ｜ NCU MIS SA</title>
+    </head>
+
+    <body>
+        <header style="box-shadow:3px 3px 5px 2px #cccccc;">
+            <div class='container'>
+                <nav class="navbar navbar-expand-lg navbar-light px-5">
+                    <a class="navbar-brand" href="#">
+                        <img src='statics/img/logo.png'>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto px-2">
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="home.html">首頁</a>
+                            </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="center.html">會員中心</a>
+                            </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" style="color: #ff8800;" href="#">熱門搜尋</a>
+                            </li>
+                            <li class="nav-item dropdown px-3">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                商品清單
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">預約清單</a>
+                                <a class="dropdown-item" href="#">追蹤清單</a>
+                                <a class="dropdown-item" href="#">售屋清單</a>
+                            </div>
+                            </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="#">常見問題</a>
+                            </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-user-block" style="height: 50px;" onmouseover="switchMenu('MainMenu', 'SubMenu', 'MouseOver')" onmouseout="hideMenu()"> 
+                        <div class="nav-user" style="margin-top: 11px;">
+                            <span class="d-none d-lg-block">
+                                <span class="nav-user-wrapper dropdown py-3">
+                                    <span class="nav-user-login mr-3">
+                                        <span class="main-menu" id="MainMenu" style="display:block;">
+                                            <i class="fas fa-user-circle"style="font-size: 1.6em;"></i>
+                                        </span>
+                                    </span>
+                                    <div id="SubMenu" class="dropdown-menu dropdown-origin-width" style="display:none;">
+                                        <a class="dropdown-item" href="index.html" style="color:  rgba(0, 0, 0, 0.87);">會員登出</a>
+                                    </div>                    
+                                </span>
+                            </span>
+                        </div>
+                    </div>                   
+                </nav>               
+            </div>
+        </header>
+
+        <section class='member' style="margin-bottom: 80px; margin-top: 90px;"> 
+        	
+        	<div id="flashMessage" class="message" style="display: none;"></div>
+        	
+            <div class="container">
+                <div class="row">
+                   <div class="col-12 col-md-9 member-row">
+                        <nav class="member-nav nav nav-tabs nav-justified d-md-flex" id="nav-active" style="margin-left: 4px;">
+                            <a href="center.html" class="nav-item nav-link">個人檔案</a>
+                            <a href="center.pl.html" class="nav-item nav-link">銷售商品</a>
+                            <a href="manager.html" class="nav-item nav-link">管理會員</a>
+                            <a href="center.edit.html" class="nav-item nav-link active">編輯檔案</a>
+                            <a href="center.identity.html" class="nav-item nav-link">驗證身分</a>
+                            <a href="center.message.html" class="nav-item nav-link">站內信息</a>
+                        </nav>   
+                        
+                        <div class="row mt-3">
+
+                        </div> 
+                        <div class="row message-row">
+                            <div class="edit-triangle">
+                                <div class="triangle_inner"></div>
+                            </div>
+                            
+                            <div class="row message-title">
+                                <div class="item-card-member-none">
+                                    <div class="text-center">
+                                        <small>編輯/修改</small>
+                                    </div>
+                                </div>
+                            </div> 
+	                        <form class="input row g-3" style="margin-top: -80px;width: 727.8px; margin-left: -0.5px;">
+	                            <div class="col-md-5" style="margin-top: 95px;margin-left: 27px;margin-right: 27px;">
+	                                <div class="data-row-text text-center font-weight-bold rounded-top">
+	                                    <span class="data-row-text text-center font-weight-bold" style="-webkit-text-emphasis-style: triangle;">[編輯會員檔案]</span>    
+	                            
+	                                </div><button type="button" id="submit1" class="btn btn-outline-light">修改</button>
+	                                <div class="data-row-wrap">
+	                                    <div class="inputData col">
+	                                    <label for="inputName" class="form-label font-weight-bold">姓名</label>
+	                                    <input type="name" class="form-control" id="inputName">
+	                                    </div>
+	
+	                                    <div class="inputData col"> 
+	                                    <label for="inputEmail" class="form-label font-weight-bold">信箱</label>
+	                                    <input type="email" class="form-control" id="inputEmail">
+	                                    </div>
+	                                    
+	                                    <div class="inputData col">
+	                                    <label for="inputPhone" class="form-label font-weight-bold">電話</label>
+	                                    <input type="phone" class="form-control" id="inputPhone">
+	                                    </div>
+	                                </div>
+	                            </div>
+	                                              
+	                                
+	                            <div style="
+								    width: 1px;
+								    margin-top: 73px;
+								    border-right: 1px solid;
+								">
+
+                        		</div>  
+                        		           
+	                            <div class="col-md-5" style="margin-left: 32px;margin-top: 97px;">
+	                                <div>
+	                                    <div class="data-row-text rounded-top text-center">
+	                                        <span class="data-row-text text-center font-weight-bold" style="-webkit-text-emphasis-style: triangle;">[更改會員密碼]</span>
+	                                        
+	                                    </div><button type="button" id="submit2" class="btn btn-outline-light">修改</button>
+	                                    <div class="data-row-wrap">
+	                                        <div class="inputData col">
+	                                            <label for="oldPwd" class="form-label font-weight-bold">舊密碼</label>
+	                                            <input type="oldPwd" class="form-control" id="oldPwd">
+	                                        </div>
+	
+	                                        <div class="inputData col"> 
+	                                            <label for="newPwd" class="form-label font-weight-bold">新密碼</label>
+	                                            <input type="newPwd" class="form-control" id="newPwd">
+	                                        </div>
+	                                        
+	                                        <div class="inputData col">
+	                                            <label for="confirmPwd" class="form-label font-weight-bold">確認密碼</label>
+	                                            <input type="confirmPwd" class="form-control" id="confirmPwd">
+	                                        </div>
+	                                    </div>    
+	                                </div>    
+	                            </div>
+	                            
+	                        </form>
+
+                        </div> 
+                    </div>
+                </div>        
+            </div>        
+        </section>
+
+        <footer id="contact" style="background-color: #f4f4f4;">
+            <div class="container px-0">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 py-5">
+                        <div class="row">                
+                            <div class="col-md-6 d-flex justify-content-around footer-block media">
+                                <div class="footer-box">
+                                    <span class="font-weight-bold" style="margin-left: 15px;">相關社群</span>
+                                        <div class="footer-content mt-3">
+                                            <div class="d-flex justify-content-around">
+                                                <a href="https://www.facebook.com/hhhfb" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/facebook.png" alt="fb" width="60" height="60">
+                                                </a>
+                                                <a href="https://line.me/ti/p/%40ovs4341s" target="_blank" style="margin-left: 7px;">
+                                                    <img class="footer-media-item" src="statics/img/skype.png" alt="skype" width="45" height="45" >
+                                                </a>
+                                                <a href="https://www.youtube.com/user/gorgeousspace" target="_blank" style="margin-left: 11px;">
+                                                    <img class="footer-media-item" src="statics/img/youtube.png" alt="youtube" width="52" height="52">
+                                                </a>
+                                                <a href="https://www.instagram.com/gorgeous_space/" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/instagram.png" alt="ig" width="64" height="49">
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-around footer-block">
+                                <div class="footer-box">              
+                                    <div class="footer-content text-center">
+                                        <span class="footer-content-tel">
+                                            矮人房屋網免付費諮詢信箱
+                                            <a href='mailto:zy3600924@gmail.com' class="text-primary text-photo-color"><i class="fas fa-envelope-square" style="color:rgb(97, 97, 97);"></i> </a>
+                                        </span>
+                                        <div class="footer-note mt-3 d-flex justify-content-center px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/contact" target="_blank">聯絡我們</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/privacy_policy" target="_blank">隱私保護</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about" target="_blank">關於本站</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="footer-note mt-2 d-flex px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/timeline" target="_blank">公司歷程</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="https://www.104.com.tw/company/d6hr8sg" target="_blank">工作機會</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/sitemap" target="_blank">網站地圖</a></span>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>                           
+        </footer>
+    </body>
+    <script type="text/javascript">
+    
+	    function getCookie(cname) {
+	    	
+	    	  var name = cname + "=";
+	    	  var decodedCookie = decodeURIComponent(document.cookie);
+	    	  var ca = decodedCookie.split(';');
+	    	  for(var i = 0; i <ca.length; i++) {
+	  	      var c = ca[i];
+	  	      while (c.charAt(0) == ' ') {
+	  	        c = c.substring(1);
+	  	      }
+	  	      
+	  	      // JavaScript 預設沒有 contain 的方法，因此使用indexOf()==0來代替
+	  	      if (c.indexOf(name) == 0) {
+	  	        return c.substring(name.length, c.length);
+	  	      }
+	  	    }
+	  	    return "";
+	    }
+	  
+	    var id = getCookie('id');
+	    var sql_num = 0;
+	    
+	    
+	 	// 取得網址參數
+	    var url_string = window.location.href;
+	    var url = new URL(url_string);
+	    var manager_id = url.searchParams.get("id");
+    
+	 	// 管理員對會員的修改動作
+	    if (manager_id != null) id = manager_id;   
+    
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("nav-active");
+        var items = header.getElementsByClassName("nav-item");
+        for (var i = 0; i < items.length; i++) {
+          items[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          });
+        }
+
+        var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
+
+        // 顯示或隱藏子選單
+        function switchMenu( theMainMenu, theSubMenu, theEvent ){
+            var SubMenu = document.getElementById( theSubMenu );
+            var MainMenu = document.getElementById( theMainMenu );
+
+            if( SubMenu.style.display == 'none' ){ // 顯示子選單
+                SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
+                SubMenu.style.display = 'block';
+                MainMenu.style.display == 'none';
+                hideMenu(); // 隱藏子選單
+                VisibleMenu = theSubMenu;
+            }
+            else{ // 隱藏子選單
+                if( theEvent != 'MouseOver' || VisibleMenu != theSubMenu ){
+                    SubMenu.style.display = 'none';
+                    MainMenu.style.display == 'block';
+                    VisibleMenu = '';
+                }
+            }
+        }
+
+        // 隱藏子選單
+        function hideMenu(){
+            if( VisibleMenu != '' ){
+                document.getElementById( VisibleMenu ).style.display = 'none';
+                MainMenu.style.display == 'block';
+            }
+            VisibleMenu = '';
+        }
+        
+        
+        $(document).ready(function() {
+            // 處理表單一的點擊事件
+            var $form1 = $('#submit1');
+            $form1.click(function() {
+                submit1();
+            });
+         	// 處理表單二的點擊事件
+            var $form2 = $('#submit2');
+            $form2.click(function() {
+                submit2();
+            });
+
+            function submit1() {
+                var name = $('#inputName').val();
+                var email = $('#inputEmail').val();
+                var phone = $('#inputPhone').val();   
+
+                var email_rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+                var phone_rule = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+
+                // 確定有輸入值，否則為null
+                if (!name || !email || !phone){
+                	alert("請輸入完整資料！");
+                }
+                else if (!email_rule.test(email)) {
+                    alert("信箱格式不符！");
+                }
+                else if(!phone_rule.test(phone)){
+                	alert("電話格式不符！");
+                }
+                else {
+                    // 將資料組成JSON格式
+                    var data_object = {
+                    	"members_id": id,
+                        "members_name": name,
+                        "members_email": email,
+                        "members_phone": phone,
+                        "action": 'editdata'
+                    };
+
+                    // 將JSON格式轉換成字串
+                    var data_string = JSON.stringify(data_object);
+
+                    // 發出POST的AJAX請求
+                    var result1 = $.ajax({
+                        type: "PUT",
+                        url: "api/member.do",
+                        data: data_string,
+                        crossDomain: true,
+                        cache: false,
+                        dataType: 'json',
+                        timeout: 5000,
+                        success: function (response) {	
+                        	if(response.status == 200){
+                        		alert(response.message);
+                        		document.location.href="center.edit.html";   
+                        	}
+                        	else if(response.status == 400){
+                        		alert(response.message);
+                        	}
+                        },
+                        error: function () {
+                            alert("無法連線到伺服器！");
+                        }
+                	});
+                }
+            }
+
+            function submit2() {
+                var password = $('#oldPwd').val();
+                var new_pwd = $('#newPwd').val();
+                var com_pwd = $('#confirmPwd').val();   
+
+                var password_rule = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            
+                // 進行輸入的相關驗證
+                if (!password){
+                	alert("請輸入原來的密碼！");
+                }
+                else if (!new_pwd) {
+                    alert("尚未設定新密碼！");
+                }
+                else if (!password_rule.test(password)) {
+                    alert("密碼格式不符！");
+                }
+                else if(new_pwd!=com_pwd){
+                	alert("確認密碼輸入錯誤！");
+                }
+                else {
+                    // 將資料組成JSON格式
+                    var data_object = {
+                    	"members_id": id,
+                        "password": password,
+                        "new_password": new_pwd,
+                        "action": 'editpassword'
+                    };
+
+                    // 將JSON格式轉換成字串
+                    var data_string = JSON.stringify(data_object);
+
+                    // 發出POST的AJAX請求
+                    var result2 = $.ajax({
+                        type: "PUT",
+                        url: "api/member.do",
+                        data: data_string,
+                        crossDomain: true,
+                        cache: false,
+                        dataType: 'json',
+                        timeout: 5000,
+                        success: function (response) {
+                        	if(response.status == 200){
+                        		alert(response.message);
+                        		console.log(response);
+                        		document.location.href="center.edit.html";  
+                        	}
+                        	else if(response.status == 400){
+                        		alert(response.message);
+                        		response.response.data;
+                        	}
+                        	
+                        },
+                        error: function () {
+                            alert("無法連線到伺服器！");
+                        }
+                	});
+
+                    result1.abort();
+                    result2.abort();
+                }
+            }
+        });
+        
+    </script>
+
+</html>

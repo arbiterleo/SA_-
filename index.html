@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>首頁 ｜ NCU MIS SA</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="statics\css\style_kpy.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3a065c1b27.js" crossorigin="anonymous"></script>
+
+  <script>
+    x=1;
+    function change(){
+      x++
+      if (x%2!=0){
+        document.getElementById("like_icon").src="statics\img\Heart-2.png";
+      }
+      else{
+        document.getElementById("like_icon").src="statics\img\Heart-2.png";
+      }
+    }
+  </script>
+  
+  <style>
+
+    .bd-placeholder-img {
+      font-size: 6rem;
+      text-anchor: left;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    
+  </style>
+  
+  <!-- Custom styles for this template -->
+  <link href="statics/css/product.css" rel="stylesheet">
+
+  <script src="statics/js/jquery-3.4.1.min.js"></script>
+</head>
+
+
+<body>
+
+  <!--標籤列-->
+  <header style="box-shadow:3px 3px 5px 2px #cccccc;position: relative;">
+            <div class='container'>
+                <nav class="navbar navbar-expand-lg navbar-light px-5" style="height: 73px;margin-left: 3px;">
+                    <a class="navbar-brand" href="#">
+                        <img src='statics/img/logo.png'>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse px-5" id="navbarSupportedContent" style="line-height: 2.72;">
+                        <ul class="navbar-nav mr-auto px-2" style="padding-left: 0.68rem!important; font-size: 16px">
+                            <li class="nav-item px-2" style="padding-left: 0.68rem!important;">
+                            <a class="nav-link" href="index.html" style="line-height: 2.7;">首頁</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.63rem!important;">
+                            <a id = "center" href="center.html" class="nav-link center"  style="line-height: 2.7;" onmousedown="jumpto(center)">會員中心</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.64rem!important;">
+                            <a class="nav-link" style="color: #ff8800; line-height: 2.7;" href="#">熱門搜尋</a>
+                            </li>
+                            <li class="nav-item dropdown px-3" style="padding-left: 1.17rem!important;">
+                            <a class="nav-link dropdown-toggle" href="#" style="line-height: 2.7;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                商品清單
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" id="reser" href="res_list.html" onmousedown="jumpto(reser)">預約清單</a>
+                                <a class="dropdown-item" id="track" href="#" onmousedown="jumpto(track)">追蹤清單</a>
+                                <a class="dropdown-item" id="sel" href="#" onmousedown="jumpto(sel)">售屋清單</a>
+                            </div>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.67rem!important;">
+                            <a class="nav-link" href="#" style="line-height: 2.7;">常見問題</a>
+                            </li>
+                            <li class="nav-item px-2" style="padding-left: 0.65rem!important;">
+                            <a class="nav-link" href="#" style="line-height: 2.7;">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-user-block" style="height: 50px;width: 27.8px;font-size: 16px;" onmouseover="switchMenu('MainMenu', 'SubMenu', 'MouseOver')" onmouseout="hideMenu()"> 
+                        <div class="nav-user" style="margin-top: 11px;">
+                            <span class="d-none d-lg-block">
+                                <span class="nav-user-wrapper dropdown py-3">
+                                    <span class="nav-user-login mr-3">
+                                        <span class="main-menu" id="MainMenu" style="display:block;">
+                                            <i class="fas fa-user-circle"style="font-size: 1.6em;"></i>
+                                        </span>
+                                    </span>
+                                    <div id="SubMenu" class="dropdown-menu" aria-labelledby="navbarDropdown" style="display:none;">
+                                        <a class="dropdown-item" href="login.html">會員登入</a>
+                                        <a class="dropdown-item" href="register.html">會員註冊</a>
+                                    </div>                      
+                                </span>
+                            </span>
+                        </div>
+                    </div>                   
+                </nav>               
+            </div>
+        </header>
+
+<div class='container'> 
+    <!-- 畫面中央-->
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"
+          style="background-color: antiquewhite;background-image:url(https://i.ibb.co/xMQMzwB/vintage-photograph-grey-couch-pastel-lounge.jpg);
+                 height:500px;background-size:1200px 694px;background-attachment:fixed;">
+
+    <!-- 搜尋框標題 -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" 
+      style="position: absolute;height:130px;width: 1000px;top: 205px;transform: translateX(15%);">
+      
+      <h6 class="display-4 font-weight-bold" style="font-weight: 900 bolder;color: rgb(150, 120, 120);position: absolute;
+                                   font-family:Microsoft YaHei;">
+            Hey Siri, where do i belong?
+      </h6>
+
+    </div>
+
+    <!--搜尋框-->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" 
+          style="background-color:  rgba(0, 0, 0, 0.616);position: absolute;height:130px;width:500px;top:340px;transform: translateX(58%);">
+            
+                    <div class="input-group" style="position: absolute;top:20px;width:450px;left:10px;">
+                        <label style="width:200px;top:15px;color: rgb(255, 255, 255);font-family:Adobe 繁黑體 stdB;font-weight:bold;font-size:25px;">我們提供您...</label>
+                        <input type="text" class="form-control"  style="width:50px"  placeholder="請輸入關鍵字">
+                        <span class="input-group-btn" >
+                            <button class=" search_btn btn-outline-secondary member-info-btn" >搜尋</button>
+                        </span>
+                    </div>
+                    
+                    <div class="text-center " style="text-align:center;margin-top:30px;">
+                      <nav class="my-4 my-md-2 mr-md-6" style="position: center; font-family:Adobe 繁黑體 stdB;font-weight:bold;word-spacing: 15px;"> 
+                         <a  style="color: rgb(255, 255, 255);background-color: rgb(235, 133, 0);font-size: 25px;padding:7px;border-radius:10px;" href="index.html">期望價錢</a>
+                         <a  style="color: aliceblue;background-color:  rgb(235, 133, 0);font-size: 25px;padding:7px;border-radius:10px;" href="index.html">商品敘述</a>
+                      </nav>
+                   </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!--商品列表-->
+<div>
+  <div class="buy_list_frame">
+
+    
+    <!--商品1-->
+      <div class="buy_list_item" >       
+          <div class="row">
+            <!--照片-->
+            <div class="col-3 item_picture">
+              <div class="img_container" >
+                <img src="statics\img\product\20200629_Industrious_Wythe Hotel_184.jpg" width="250x" >
+              </div>
+            </div>
+            <!--內容-->
+            <div class="col item_content">
+              <div>
+                <div class="item_name"><h2>無印工業簡約風格</h2></div>            
+                <div class="item_infor">
+                    <span class="item_infor_span">台北市北投區行義路</span>
+                    <span>11.5年</span>
+                </div>              
+                <div class="item_infor">
+                  <span class="item_infor_span">建坪 79.11</span>
+                  <span class="item_infor_span">沒有鬧鬼</span>
+                  <span class="item_infor_span">3房2廳2衛1室</span>
+                  <span class="">有電梯</span>
+                </div>
+              </div>
+            </div>
+         
+            <!--價錢-->
+            <div class="col-2 item_price_container">
+                <span class="item_price">2,000</span>
+                <span>萬</span>
+                <div class="row LongInfoCard_LikeBtnWeb">
+                  <div class="LikeBtn_icon ">
+                    <img style="max-width: 100%; max-height: 100%;" id="like_icon" src="statics\img\Heart-2.png" onclick="change()">
+                  </div>
+                  <div>
+                    <span style=" font-size: 0.88rem; line-height: 16px;">加入追蹤清單</span>
+                  </div>
+              </div>
+            </div>
+          </div>       
+      </div>
+
+    <!--商品2-->
+    <div class="buy_list_item" >
+
+        <div class="row">
+          <!--照片-->
+          <div class="col-3 item_picture">
+            <div class="img_container" >
+              <img src="statics\img\product\hkgkw-seaview-room-50728900.jpg" width="250x" >
+            </div>
+          </div>
+          <!--內容-->
+          <div class="col item_content">
+            <div>
+              <div class="item_name"><h2>都市遠眺景觀房</h2></div>            
+              <div class="item_infor">
+                  <span class="item_infor_span">台南市永康區仁愛路</span>
+                  <span>8.5年</span>
+              </div>              
+              <div class="item_infor">
+                <span class="item_infor_span">建坪 23.55</span>
+                <span class="item_infor_span">有鬧鬼</span>
+                <span class="item_infor_span">2房1廳2衛</span>
+                <span class="">有電梯</span>
+              </div>
+            </div>
+          </div>
+          <!--價錢-->
+          <div class="col-2 item_price_container">
+              <span class="item_price">1,320</span>
+              <span>萬</span>
+              <div class="row LongInfoCard_LikeBtnWeb">
+                <div class="LikeBtn_icon">
+                  <img  style="max-width: 100%; max-height: 100%;" src="statics\img\Heart-2.png">
+                </div>
+                <div>
+                  <span style=" font-size: 0.88rem; line-height: 16px;">加入追蹤清單</span>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+  <script>   
+    var [client_cart_obj, client_cart_amount]  = getCartDataFromClient();
+    
+    function getAllProduct() {
+      $.ajax({
+        type: "GET",
+        url: "api/product.do",
+        crossDomain: true,
+        cache: false,
+        dataType: 'json',
+        timeout: 5000,
+        success: function (response) {
+          if (response.status == 200) {
+        	var product_panel = '';
+        	
+        	$.each(response.response.data, function (){
+        		product_panel += addProduct(this);
+        	})
+        	
+        	$("#product_panel").append(product_panel);
+        	setButtonFunction();
+        	checkIfExistInCart();
+          }
+        },
+        error: function () {
+          alert("無法連線到伺服器！");
+        }
+      });
+    }
+
+    getAllProduct();
+    
+    function addProduct(data) {
+    	let inner_html = '';
+    	inner_html += '<div class="col-md-4">';
+   		inner_html += '<div class="card-header">';
+   		inner_html += '<h4 class="font-weight-normal text-center text-truncate">' + data.name + '</h4>';
+ 		inner_html += '</div>';
+ 		inner_html += '<div class="card mb-4 shadow-sm">';
+ 		inner_html += '<img src="statics/img/product/' + data.image + '" width="100%">';
+		inner_html += '<div class="card-body">';
+		inner_html += '<h1 class="card-title pricing-card-title">$' + data.price + ' <small class="text-muted">/ USD</small></h1>';
+		inner_html += '<p class="card-text">' + data.describe + '</p>';
+		inner_html += '<div class="d-flex justify-content-between align-items-center">';
+		inner_html += '<div class="btn-group">';
+		inner_html += '<button id="add_cart_' + data.id + '" name="add_cart" type="button" class="btn btn-lg btn-block btn-outline-primary">加入購物車</button>';
+		inner_html += '</div><small class="text-muted">id: ' + data.id + '</small>';
+		inner_html += '</div></div></div></div>';
+    	
+		return inner_html;
+    }
+    
+    function setButtonFunction() {
+    	$('button[name="add_cart"]').click(function () {
+    		var action = (this.id).split('_')[0];
+    		var destination = (this.id).split('_')[1];
+    		var id = (this.id).split('_')[2];
+    		addProductToCart(id, 1);
+        });
+    }
+    
+    function getCartDataFromClient() {
+    	let cart = JSON.parse(localStorage.getItem("client_cart_obj"));
+    	let amount = JSON.parse(localStorage.getItem("client_cart_amount"));
+    	cart = !cart ? new Array() : cart;
+    	amount = !amount ? new Array() : amount;
+    	return [cart, amount];
+    }
+    
+    function addProductToCart(id, amount) {
+    	if (!(client_cart_obj.includes(id))) {
+    		client_cart_obj.push(id);
+    		client_cart_amount.push(amount);
+    		updateCartDataToClent();
+    	}
+    	
+    	checkIfExistInCart();
+    }
+    
+    function updateCartDataToClent() {
+    	localStorage.setItem("client_cart_obj", JSON.stringify(client_cart_obj));
+    	localStorage.setItem("client_cart_amount", JSON.stringify(client_cart_amount));
+    }
+    
+    function checkIfExistInCart() {
+    	$('button[name="add_cart"]').each(function (){
+    		var action = (this.id).split('_')[0];
+    		var destination = (this.id).split('_')[1];
+    		var id = (this.id).split('_')[2];
+    		if (client_cart_obj.includes(id)) {
+    			setButtonState(this.id, false);
+    		}
+    		else {
+    			setButtonState(this.id, true);
+    		}
+    		
+        });
+    }
+    
+    function setButtonState(id, action) {
+    	if (!action) {
+    	    $('#' + id).prop('disabled', true);
+    	    $('#' + id).addClass('disabled');
+    	    $('#' + id).html('已加入');
+    	}
+    	else {
+    		$('#' + id).prop('disabled', false);
+    	    $('#' + id).removeClass('disabled');
+    	    $('#' + id).html('加入購物車');
+    	}
+    }
+    
+    var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
+
+    // 顯示或隱藏子選單
+    function switchMenu( theMainMenu, theSubMenu, theEvent ){
+        var SubMenu = document.getElementById( theSubMenu );
+        var MainMenu = document.getElementById( theMainMenu );
+
+        if( SubMenu.style.display == 'none' ){ // 顯示子選單
+            SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
+            SubMenu.style.display = 'block';
+            MainMenu.style.display == 'none';
+            hideMenu(); // 隱藏子選單
+            VisibleMenu = theSubMenu;
+        }
+        else{ // 隱藏子選單
+            if( theEvent != 'MouseOver' || VisibleMenu != theSubMenu ){
+                SubMenu.style.display = 'none';
+                MainMenu.style.display == 'block';
+                VisibleMenu = '';
+            }
+        }
+    }
+
+    // 隱藏子選單
+    function hideMenu(){
+        if( VisibleMenu != '' ){
+            document.getElementById( VisibleMenu ).style.display = 'none';
+            MainMenu.style.display == 'block';
+        }
+        VisibleMenu = '';
+    }
+    
+    //登入轉址判斷
+    function jumpto(id){
+    	var log = getCookie('logined');
+    	var el = document.getElementById(id);
+    	if(log!=1){; 
+    		
+    		alert("請先完成登入!") 
+    	    document.location.href="login.html"; 
+    	}
+
+    }
+    
+    
+    //讀取cookie值
+    function getCookie(cname)
+    {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) 
+      {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+      }
+      return "";
+    }
+    
+  </script>
+
+  
+<footer id="contact" style="background-color: #f4f4f4; box-shadow: 3px 3px 5px 2px #cccccc;">
+            <div class="px-0">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 py-5">
+                        <div class="row" style="height: 130px;">                
+                            <div class="col-md-6 d-flex justify-content-around footer-block media" style="height: 113px;">
+                                <div class="footer-box">
+                                    <span class="font-weight-bold" style="margin-left: 15px;">相關社群</span>
+                                        <div class="footer-content mt-3">
+                                            <div class="d-flex justify-content-around">
+                                                <a href="https://www.facebook.com/hhhfb" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/facebook.png" alt="fb" width="60" height="60">
+                                                </a>
+                                                <a href="https://line.me/ti/p/%40ovs4341s" target="_blank" style="margin-left: 7px;">
+                                                    <img class="footer-media-item" src="statics/img/skype.png" alt="skype" width="45" height="45" >
+                                                </a>
+                                                <a href="https://www.youtube.com/user/gorgeousspace" target="_blank" style="margin-left: 11px;">
+                                                    <img class="footer-media-item" src="statics/img/youtube.png" alt="youtube" width="52" height="52">
+                                                </a>
+                                                <a href="https://www.instagram.com/gorgeous_space/" target="_blank">
+                                                    <img class="footer-media-item" src="statics/img/instagram.png" alt="ig" width="64" height="49">
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-around footer-block" style="height: 113px;">
+                                <div class="footer-box" style="line-height: 1.75;">              
+                                    <div class="footer-content text-center">
+                                        <span class="footer-content-tel">
+                                            矮人房屋網免付費諮詢信箱
+                                            <a href='mailto:zy3600924@gmail.com' class="text-primary text-photo-color"><i class="fas fa-envelope-square" style="color:rgb(97, 97, 97);"></i> </a>
+                                        </span>
+                                        <div class="footer-note mt-3 d-flex justify-content-center px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/contact" target="_blank">聯絡我們</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/privacy_policy" target="_blank">隱私保護</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about" target="_blank">關於本站</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="footer-note mt-2 d-flex px-3">
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/timeline" target="_blank">公司歷程</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="https://www.104.com.tw/company/d6hr8sg" target="_blank">工作機會</a></span>
+                                            </div>
+                                            <div class="px-2 footer-note-item">
+                                                <span><a href="/about/sitemap" target="_blank">網站地圖</a></span>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>                           
+        </footer>
+
+
+
+</body>
+</html>
